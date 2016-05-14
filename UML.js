@@ -10,7 +10,6 @@ window.onload = function () {
     }, interval);//每隔1s执行一次
 
     var submit = document.getElementById("submit");
-
     submit.onclick = function () {
         controlsDown();
     };
@@ -25,13 +24,15 @@ function cutoff(minites) {//计算最长的答卷时间,返回Date型...
     nowDate.setTime(nowDate.getTime() + minites * 60 * 1000);
     return nowDate;
 }
-function controlsDown(){
+
+function controlsDown() {
     var message = confirm("确认提交吗?");
+
     if (message === true) {
-        if (!mandatory()) {//检查姓名,班级,学号是否填写
-            alert("Please complete information");
-            return false;
-        }
+        //if (!mandatory()) {//检查姓名,班级,学号是否填写
+        //    alert("Please complete information");
+        //    return false;
+        //}
         calculateScore();
     }
 }
@@ -42,7 +43,7 @@ function calculationDeadlin(endDate) {
 
     var minute = Math.floor(leftSecond / 60);
     var second = Math.floor(leftSecond - minute * 60);
-    document.getElementById("deadline").innerHTML = "剩余时间:" + minute + "分" + second + "秒";
+    $("#deadline").html("剩余时间:" + minute + "分" + second + "秒");
 
     if (minute === 0 && second === 0) {
         calculateScore();
@@ -53,7 +54,7 @@ function calculateScore() {//计算总分
     stop(s);
     var totalScore = addTotalScore();
     alert("你的总分为:" + totalScore);
-    document.getElementById("totalScore").innerHTML = "得分:" + totalScore;
+    $("#totalScore").html("得分:" + totalScore);
 }
 
 function addTotalScore() {//将所有大题的分数相加
@@ -75,6 +76,7 @@ function getScoresThird(smalllNames, answer) {//统计第三道大题做对的�
             flag++;
         }
     }
+
     return flag;
 }
 
@@ -117,7 +119,7 @@ function haveEqual(smalllName, answer) {//统计单选题或判断题做对的�
     var numberCorrect = 0;
 
     for (var i = 0; i < returnLength(smalllName); i++) {
-        if (select(smalllName, i) && isEqual(returnValue(smalllName, i), answer)) {
+        if (select(smalllName, i) && (returnValue(smalllName, i) === answer)) {
             numberCorrect++;
         }
     }
@@ -170,9 +172,7 @@ function loadAllAnswers() {//所有的正确答案
 }
 
 function mandatory() {   //检查姓名,班级,学号是否填写
-    if (document.getElementById("userClass").value &&
-        document.getElementById("userName").value &&
-        document.getElementById("userId").value) {
+    if ($("#userClass").val() && $("#userName").val() && $("#userId").val()) {
         return true;
     }
 }
