@@ -29,10 +29,10 @@ function controlsDown() {
     var message = confirm("确认提交吗?");
 
     if (message === true) {
-        //if (!mandatory()) {//检查姓名,班级,学号是否填写
-        //    alert("Please complete information");
-        //    return false;
-        //}
+        if (!mandatory()) {//检查姓名,班级,学号是否填写
+            alert("Please complete information");
+            return false;
+        }
         calculateScore();
     }
 }
