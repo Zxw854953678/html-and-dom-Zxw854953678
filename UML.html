@@ -2,171 +2,244 @@
 
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>统一建模语言UML</title>
-    <script src="UML.js"></script>
+  <meta charset="utf-8">
+  <title>统一建模语言UML</title>
+  <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap-theme.min.css">
+
+  <script src="UML.js"></script>
 </head>
 
 <body>
-<div>
-<header>
-    <p>西安软件服务外包学院</p><hr>
+<div class="container">
+  <header>
+    <p>西安软件服务外包学院</p>
+    <hr>
     <h1 class="text-center">统一建模语言UML</h1>
-    <table>
+    <div class="table-responsive form-group">
+      <table class="table">
         <tr>
-            <td>考试科目:<strong>统一建模语言UML</strong> </td>
-            <td id="time">时间:100分</td>
-            <td id="totalScore">得分:</td>
-            <td id="deadline">剩余时间:100分</td>
+          <td>考试科目:<strong>统一建模语言UML</strong></td>
+          <td id="time">时间:100分</td>
+          <td id="totalScore">得分:</td>
+          <td id="deadline">剩余时间:100分</td>
         </tr>
         <tr>
-            <td>
-                班级:<label><input id="userClass" type="text"></label>
-            </td>
-            <td>
-                姓名:<label><input id="userName" type="text"></label>
-            </td>
-            <td>
-                学号:<label><input id="userId" type="text"></label>
-            </td>
+          <td>
+            班级:<label><input class="form-control input-sm" id="userClass" type="text"></label>
+          </td>
+          <td>
+            姓名:<label><input class="form-control input-sm" id="userName" type="text"></label>
+          </td>
+          <td>
+            学号:<label><input class="form-control input-sm" id="userId" type="text"></label>
+          </td>
         </tr>
-    </table>
-</header>
+      </table>
+    </div>
+  </header>
 
-<section>
+  <section>
     <header>
-        <h3>一、填空题</h3>
+      <h3>一、填空题</h3>
     </header>
     <ol>
-        <li>
-            <label>
-                UML的中文全称是:<input type="text"  id="fill_in_blank_0_0" name="blank">。<br>
-            </label>
-        </li>
-        <li>
-            <label>
-                对象最突出的特征是:
-                <input type="text" id="fill_in_blank_1_0" name="blank">、
-                <input type="text" id="fill_in_blank_1_1" name="blank">、
-                <input type="text" id="fill_in_blank_1_2" name="blank">。
-            </label>
-        </li>
-    </ol>
-</section>
+      <li>
+        <label>
+          UML的中文全称是:<input type="text" id="fill_in_blank_0_0" name="blank">。
+        </label>
+      </li>
 
-<section>
+      <li>
+        <label>
+          对象最突出的特征是:
+          <input type="text" id="fill_in_blank_1_0" name="blank">、
+          <input type="text" id="fill_in_blank_1_1" name="blank">、
+          <input type="text" id="fill_in_blank_1_2" name="blank">。
+        </label>
+      </li>
+    </ol>
+  </section>
+
+  <section>
     <header>
-        <h3>二、选择题</h3>
+      <h3>二、选择题</h3>
     </header>
     <ol>
-        <li>
-            <p>UML与软件工程的关系是:</p>
-            <label>
-                <input type="radio" id="multiple_choice_0_0" name="relationship" value="A">
-                (A)UML就是软件工程<br>
-                <input type="radio" id="multiple_choice_0_1" name="relationship" value="B">
-                (B)UML参与到软件工程中软件开发过程的几个阶段<br>
-                <input type="radio" id="multiple_choice_0_2" name="relationship" value="C">
-                (C)UML与软件工程无关<br>
-                <input type="radio" id="multiple_choice_0_3" name="relationship" value="D">
-                (D)UML是软件工程的一部分
-            </label>
-        </li>
+      <li>
+        <p>UML与软件工程的关系是:</p>
+        <div class="radio">
+          <label>
+            <input type="radio" id="multiple_choice_0_0" name="relationship" value="A">
+            (A)UML就是软件工程
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="multiple_choice_0_1" name="relationship" value="B">
+            (B)UML参与到软件工程中软件开发过程的几个阶段
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="multiple_choice_0_2" name="relationship" value="C">
+            (C)UML与软件工程无关
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="multiple_choice_0_3" name="relationship" value="D">
+            (D)UML是软件工程的一部分
+          </label>
+        </div>
+      </li>
 
-        <li>
-            <p>Java语言支持:</p>
-            <label>
-                <input type="radio" id="multiple_choice_1_0" name="languageSupport" value="A">
-                (A)单继承<br>
-                <input type="radio" id="multiple_choice_1_1" name="languageSupport" value="B">
-                (B)多继承<br>
-                <input type="radio" id="multiple_choice_1_2" name="languageSupport" value="C">
-                (C)单继承和多继承都支持<br>
-                <input type="radio" id="multiple_choice_1_3" name="languageSupport" value="D">
-                (D)单继承和多继承都不支持
-            </label>
-        </li>
+      <li>
+        <p>Java语言支持:</p>
+        <div class="radio">
+          <label>
+            <input type="radio" id="multiple_choice_1_0" name="languageSupport" value="A">
+            (A)单继承
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="multiple_choice_1_1" name="languageSupport" value="B">
+            (B)多继承
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="multiple_choice_1_2" name="languageSupport" value="C">
+            (C)单继承和多继承都支持
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="multiple_choice_1_3" name="languageSupport" value="D">
+            (D)单继承和多继承都不支持
+          </label>
+        </div>
+      </li>
     </ol>
-</section>
+  </section>
 
-<section>
+  <section>
     <header>
-        <h3>三、多选题</h3>
+      <h3>三、多选题</h3>
     </header>
     <ol>
-        <li>
-            <p>用例的粒度分为以下哪三种。</p>
-            <label>
-                <input type="checkbox" id="multiple_choices_0_0" name="granularity" value = "A">
-                (A)概述级<br>
-                <input type="checkbox" id="multiple choices_0_1" name="granularity" value = "B">
-                (B)需求级<br>
-                <input type="checkbox" id="multiple choices_0_2" name="granularity" value = "C">
-                (C)用户目标级<br>
-                <input type="checkbox" id="multiple choices_0_3" name="granularity" value = "D">
-                (D)子功能级
-            </label>
-        </li>
+      <li>
+        <p>用例的粒度分为以下哪三种。</p>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="multiple_choices_0_0" name="granularity" value="A">
+            (A)概述级
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="multiple choices_0_1" name="granularity" value="B">
+            (B)需求级
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="multiple choices_0_2" name="granularity" value="C">
+            (C)用户目标级
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="multiple choices_0_3" name="granularity" value="D">
+            (D)子功能级
+          </label>
+        </div>
+      </li>
 
-        <li>
-            <p>类图由以下哪三部分组成。</p>
-            <label>
-                <input type="checkbox" id="multiple_choices_1_0" name="composition" value = "A">
-                (A)名称(Name)<br>
-                <input type="checkbox" id="multiple_choices_1_1" name="composition" value = "B">
-                (B)属性(Attribute)<br>
-                <input type="checkbox" id="multiple_choices_1_2" name="composition" value = "C">
-                (C)操作(Operation)<br>
-                <input type="checkbox" id="multiple_choices_1_3" name="composition" value = "D">
-                (D)方法(Function)
-            </label>
-        </li>
+      <li>
+        <p>类图由以下哪三部分组成。</p>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="multiple_choices_1_0" name="composition" value="A">
+            (A)名称(Name)
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="multiple_choices_1_1" name="composition" value="B">
+            (B)属性(Attribute)
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="multiple_choices_1_2" name="composition" value="C">
+            (C)操作(Operation)
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="multiple_choices_1_3" name="composition" value="D">
+            (D)方法(Function)
+          </label>
+        </div>
+      </li>
     </ol>
-</section>
+  </section>
 
-<section>
+  <section>
     <header>
-        <h3>四、判断题</h3>
+      <h3>四、判断题</h3>
     </header>
     <ol>
-        <li>
-            <p>用例图只是用于和客户交流和沟通的,用于确定需求。</p>
-            <label>
-                <input type="radio" id="true_or_false_0_0" name="judge1" value="true">
-                对
-                <input type="radio" id="true_or_false_0_1" name="judge1" value="false">
-                错
-            </label>
-        </li>
-        <li>
-            <p>在状态图中,终止状态在一个状态图中允许有任意多个。</p>
-            <label>
-                <input type="radio" id="true_or_false_1_0" name="judge2" value="true">
-                对
-                <input type="radio" id="true_or_false_1_1" name="judge2" value="false">
-                错
-            </label>
+      <li>
+        <p>用例图只是用于和客户交流和沟通的,用于确定需求。</p>
+        <div class="form-group">
+          <label class="radio-inline">
+            <input type="radio" id="true_or_false_0_0" name="judge2" value="true">
+            对
+          </label>
 
-        </li>
+          <label class="radio-inline">
+            <input type="radio" id="true_or_false_0_1" name="judge2" value="false">
+            错
+          </label>
+        </div>
+      </li>
+      <li>
+        <p>在状态图中,终止状态在一个状态图中允许有任意多个。</p>
+        <div class="form-group">
+          <label class="radio-inline">
+            <input type="radio" id="true_or_false_1_0" name="judge2" value="true">
+            对
+          </label>
+          <label class="radio-inline">
+            <input type="radio" id="true_or_false_1_1" name="judge2" value="false">
+            错
+          </label>
+        </div>
+      </li>
     </ol>
-</section>
+  </section>
 
-<section>
+  <section>
     <header>
-        <h3>五、简答题</h3>
+      <h3>五、简答题</h3>
     </header>
     <ol>
-        <li>
-            <p>简述什么是模型以及模型的表现形式?</p>
-            <label>
-                <textarea id="txtarea_0" name="manifestations" rows="10" cols="50">请在这里填写...</textarea>
-            </label>
-        </li>
+      <li>
+        <p>简述什么是模型以及模型的表现形式?</p>
+        <label>
+          <textarea class="form-control input-lg" id="txtarea_0" name="manifestations" rows="10"
+                    cols="50">请在这里填写...</textarea>
+        </label>
+      </li>
     </ol>
-</section>
+  </section>
 </div>
-<div>
-    <input class="btn btn-primary" id="submit" type="button" value="提交">
+<div class="span7 text-center">
+  <button class="btn btn-primary btn-lg" id="submit" type="button">提交(submit)</button>
 </div>
+
 </body>
 </html>
